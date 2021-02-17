@@ -17,8 +17,12 @@ app.get('/api/v1/reservations', (request, response) => {
   return response.json(app.locals.reservations)
 });
 
-app.get('/api/v1/menu', (request, response) => {
-  return response.json(app.locals.menu)
+app.get('/api/v1/menu/drinks', (request, response) => {
+  return response.json(app.locals.menu.drinks)
+});
+
+app.get('/api/v1/menu/food', (request, response) => {
+  return response.json(app.locals.menu.food)
 });
 
 app.post('/api/v1/reservations', (request, response) => {
