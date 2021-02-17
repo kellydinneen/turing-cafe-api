@@ -17,6 +17,10 @@ app.get('/api/v1/reservations', (request, response) => {
   return response.json(app.locals.reservations)
 });
 
+app.get('/api/v1/menu', (request, response) => {
+  return response.json(app.locals.menu)
+});
+
 app.post('/api/v1/reservations', (request, response) => {
   const { name, date, time, number } = request.body;
 
